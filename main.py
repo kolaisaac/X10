@@ -21,7 +21,7 @@ def get_info():
 
     #My GitHub repo info
     github_repo_url = 'https://github.com/kolaisaac'
-    github_file_url = ''
+    github_file_url = 'https://github.com/kolaisaac/SageMakerRL-SML-Summit-2019/blob/master/Sagemaker_RL_Lab_Summit_2019_One_Click_old.ipynb'
 
     #Status code
     status_code = 200
