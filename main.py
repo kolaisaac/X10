@@ -20,7 +20,7 @@ def get_info():
     current_time_str = current_time.strftime('%T-%m-%dT%H:%M:%SZ')
 
     #My GitHub repo info
-    github_repo_url = ''
+    github_repo_url = 'https://github.com/kolaisaac'
     github_file_url = ''
 
     #Status code
