@@ -29,16 +29,22 @@ def get_info():
     #JSON response
 
     response_data = {
-        'slack_name': slack_name,
+        'slack_name': 'blestisaac',
         'current_day': current_day,
         'time': current_time_str,
-        'track': track,
+        'track': 'backend',
         'github_repo_url': github_repo_url,
         'github_file_url': github_file_url,
         'status_code': status_code
     }
 
-    return jsonify(response_data)
+    #Using json.dumps to format the JSON with indentation
+
+    response_json = json.dumps(response_data, indent=2)
+
+    #Set content type
+    return response_json, 200, {'Content-Type': 'application/json'}
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
