@@ -10,7 +10,7 @@ app = Flask(__name__)
 def get_info():
     #Get query parameters
     slack_name = request.args.get('slack_name')
-    track = request.argd.get('track')
+    track = request.args.get('track')
 
     #Get current day of the week
     current_day = datetime.now().strftime('%A')
@@ -20,7 +20,7 @@ def get_info():
     current_time_str = current_time.strftime('%T-%m-%dT%H:%M:%SZ')
 
     #My GitHub repo info
-    github_repo_url = 'https://github.com/kolaisaac'
+    github_repo_url = 'https://github.com/kolaisaac/SageMakerRL-SML-Summit-2019'
     github_file_url = 'https://github.com/kolaisaac/SageMakerRL-SML-Summit-2019/blob/master/Sagemaker_RL_Lab_Summit_2019_One_Click_old.ipynb'
 
     #Status code
