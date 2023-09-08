@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request
 from datetime import datetime, timedelta
 import requests
 import json
@@ -17,7 +17,7 @@ def get_info():
 
     #Get current time
     current_time = datetime.utcnow()
-    current_time_str = current_time.strftime('%T-%m-%dT%H:%M:%SZ')
+    current_time_str = current_time.strftime('%Y-%m-%dT%H:%M:%SZ')
 
     #My GitHub repo info
     github_repo_url = 'https://github.com/kolaisaac/SageMakerRL-SML-Summit-2019'
@@ -31,7 +31,7 @@ def get_info():
     response_data = {
         'slack_name': 'blestisaac',
         'current_day': current_day,
-        'time': current_time_str,
+        'utc_time': current_time_str,
         'track': 'backend',
         'github_repo_url': github_repo_url,
         'github_file_url': github_file_url,
