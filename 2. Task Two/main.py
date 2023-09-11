@@ -1,5 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
 
+# Initialize DATABASE
+
 db = SQLAlchemy()
 
 class Person(db.Model):
