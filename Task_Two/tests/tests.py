@@ -1,5 +1,7 @@
 import unittest
 import json
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 from app import app, db, Person
 
 class TestPersonAPI(unittest.TestCase):

@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from main import db, Person
+from models import db, Person
 
 # Flask Application
 app = Flask(__name__)
@@ -8,6 +8,14 @@ app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db.init_app(app)
+
+with app.app_context():
+    db.create_all()
+
+@app.route('/', methods=['GET'])
+def index():
+    return jsonify({"message": "Welcome to my Webpage"})
+
 
 @app.route('/persons', methods=['POST'])
 
